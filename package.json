@@ -1,0 +1,36 @@
+{
+  "name": "mcp-server-sample",
+  "version": "1.0.0",
+  "description": "this is a sample mcp server",
+  "main": "dist/index.js",
+  "bin": {
+    "mcp-server-sample": "./dist/index.js"
+  },
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "inspector": "npx -y @modelcontextprotocol/inspector node dist/index.js",
+    "build": "tsc",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiaoleiatms/mcp-server-sample.git"
+  },
+  "keywords": [
+    "mcp",
+    "sample"
+  ],
+  "author": "qiaolei",
+  "bugs": {
+    "url": "https://github.com/qiaoleiatms/mcp-server-sample/issues"
+  },
+  "homepage": "https://github.com/qiaoleiatms/mcp-server-sample#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
