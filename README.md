@@ -39,9 +39,10 @@ This will launch the server along with the MCP inspector for debugging and monit
 # Usage
 You can configure this MCP server to any MCP-compatible client to request weather data for a specific location. The server will respond with the current temperature and weather description.
 
-```mcp.json
+A sample mcp.json configuration for connecting to this server is as follows:
+```json
 {
-    servers: [
+    "servers": {
         "mcp-server-sample": {
             "type": "stdio",
             "command": "node",
@@ -53,6 +54,6 @@ You can configure this MCP server to any MCP-compatible client to request weathe
                 // any environment variables if needed
             }
         }
-    ]
+    }
 }
 ```
