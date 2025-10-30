@@ -7,12 +7,6 @@ export const GetWeatherRequestSchema = zod.object({
 
 export type GetWeatherRequest = zod.infer<typeof GetWeatherRequestSchema>;
 
-export function validateGetWeatherRequest(
-  data: unknown
-): GetWeatherRequest {
-  return GetWeatherRequestSchema.parse(data);
-}
-
 export interface WeatherData {
   temperature: number;
   description: string;

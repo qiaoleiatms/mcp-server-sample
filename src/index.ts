@@ -25,9 +25,9 @@ server.registerTool(
                 content: [
                     {
                         type: "text",
-                        text: formattedData
-                    }
-                ]
+                        text: formattedData,
+                    },
+                ],
             }; // Return the formatted weather data in the expected response format
         } catch (error) {
             console.error("Error occurred while fetching weather data:", error);
@@ -35,12 +35,35 @@ server.registerTool(
                 content: [
                     {
                         type: "text",
-                        text: "Error fetching weather data"
-                    }
+                        text: "Error fetching weather data",
+                    },
                 ],
-                isError: true
+                isError: true,
             }; // Return an error response
         }
+    }
+);
+
+server.registerPrompt(
+    "weather_prompt",
+    {
+        description:
+            "A prompt to get the current weather for a specified location.",
+        argsSchema: GetWeatherRequestSchema.shape,
+    },
+    (input) => {
+        const { location } = input;
+        return {
+            messages: [
+                {
+                    role: "user",
+                    content: {
+                        type: "text",
+                        text: `What is the current weather in ${location}?`,
+                    },
+                },
+            ],
+        };
     }
 );
 
