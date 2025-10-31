@@ -74,11 +74,11 @@ server
     .then(async () => {
         // For debugging purposes, you can uncomment the following line
         // But it's commented out to keep the output clean during normal operation as we're using stdio transport
-        // console.info("MCP server connected successfully.");
+        console.info("MCP server connected successfully.");
     })
     .catch((error: Error) => {
-        // console.error("Error occurred while connect to MCP server:", error);
+        console.error("Error occurred while connect to MCP server:", error);
     })
     .finally(() => {
-        // console.info("MCP server is running. Press Ctrl+C to exit.");
+        console.info("MCP server is running. Press Ctrl+C to exit.");
     });
