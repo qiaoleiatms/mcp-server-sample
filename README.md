@@ -10,7 +10,7 @@ This is a sample project demonstrating how to create an MCP (Model Context Proto
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/qiaolei/mcp-server-sample.git
+   git clone https://github.com/qiaoleiatms/mcp-server-sample.git
    ```
 2. Navigate to the project directory:
    ```bash
